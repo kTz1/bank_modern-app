@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'prefer-arrow',
   ],
   rules: {
     'react/react-in-jsx-scope': 0,
@@ -26,6 +27,15 @@ module.exports = {
     'max-len': [
       2,
       250,
+    ],
+    'prefer-arrow/prefer-arrow-functions': [
+      'warn',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: true,
+        classPropertiesAllowed: true,
+        allowStandaloneDeclarations: true,
+      },
     ],
     'no-multiple-empty-lines': [
       'error',
